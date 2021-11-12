@@ -7,7 +7,7 @@ int main(){
 	vector <bool> sixbits; // for dividing the 8bit array into 6 bits
 	string plaintxt;
 	cout << "Plaintext: ";
-	// using getline so that spaces are supported
+	// using getline so that spaces are supported, terminated on newline [enter]
 	getline(cin, plaintxt, '\n');
 	int decimal[plaintxt.size()];
 	// turning plaintext into ascii integers

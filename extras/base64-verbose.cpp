@@ -31,12 +31,12 @@ int main(){
 		for(int addzero = 8 - sinbyte.size(); addzero > 0; addzero--){
 			sinbyte.insert(sinbyte.begin(), false);
 		}
-		//--------------------------|
+		//------------------------|
 		for(bool binary: sinbyte){
 			if(binary) cout << "1";
 			else cout << "0";
 		} cout <<" ";
-		//------------|
+		//-----------|
 		int bitcounter = i * 8;
 		bitstring.insert(bitstring.begin() + bitcounter, sinbyte.begin(), sinbyte.end());
 		sinbyte.clear();
@@ -71,7 +71,7 @@ int main(){
 			}
 			i3++;
 		}
-		//-------------------------|
+		//------------------------|
 		for(bool binary: sixbits){
 			if(binary) cout << "1";
 			else cout << "0";
