@@ -97,7 +97,8 @@ int main(){
 	cout << "----------------------------" <<endl;
 	for(int i = 0; i < sixbitsize; i++){
 		base64[i]=char(numarray[i]);
-		cout << numarray[i] << " = " << base64[i] <<endl;
+		if(numarray[i] < 100) cout << numarray[i] << "  = " << base64[i] <<endl; 
+		else cout << numarray[i] << " = " << base64[i] <<endl;
 	}
 	cout << "-------" <<endl;
 	if(4-(sixbitsize%4) == 2){
