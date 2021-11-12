@@ -66,7 +66,7 @@ int main(){
 		}
 		numarray[i1]=num;
 		sixbits.clear();
-	};
+	}
 	//use substitution to make conversion to char easier and more direct
 	for(int i = 0; i < sixbitsize; i++){
 		if(numarray[i] <= 25) numarray[i]+=65;

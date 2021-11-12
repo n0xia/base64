@@ -67,24 +67,24 @@ int main(){
 		}
 		numarray[i1]=num; // numarray is given the converted value
 		sixbits.clear(); // clear sixbits for repeated use
-	};
-	//use substitution to make conversion to char easier and more direct
+	}
+	// use substitution to make conversion to char easier and more direct
 	for(int i = 0; i < sixbitsize; i++){
-		if(numarray[i] <= 25) numarray[i]+=65;
-		else if(numarray[i] >= 26 && numarray[i] <= 51) numarray[i]+=71;
-		else if(numarray[i] >= 52 && numarray[i] <= 61 ) numarray[i]-=4;
-		else if(numarray[i] == 62) numarray[i]=43;
-		else if(numarray[i] == 63) numarray[i]=47;
-	};
-	//convert to char
-	char base64[sixbitsize];
+		if(numarray[i] <= 25) numarray[i]+=65; // capital letters go from 65 to 90
+		else if(numarray[i] >= 26 && numarray[i] <= 51) numarray[i]+=71; // lowercase letters go from 97 to 122
+		else if(numarray[i] >= 52 && numarray[i] <= 61 ) numarray[i]-=4; // numbers go from 48 to 57
+		else if(numarray[i] == 62) numarray[i]=43; // special case for +
+		else if(numarray[i] == 63) numarray[i]=47; // special case for /
+	}
+	// convert integers to characters
+	char base64[sixbitsize]; // character array for the final Base64 encoding
 	for(int i = 0; i < sixbitsize; i++){
-		base64[i]=char(numarray[i]);
+		base64[i]=char(numarray[i]); // char function translates integers to characters through the ascii standard
 	}
 	for(int i = 0; i < (sixbitsize); i++){
-		cout << base64[i];
+		cout << base64[i]; // output the final result
 	}
-	//pad with = to make final result divisible by 4
+	//pad with = to make final string divisible by 4 (necessary if several base64 strings are concatenated)
     if(4-(sixbitsize%4) == 2){
         cout << "==";
     }
