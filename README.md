@@ -15,4 +15,4 @@ The extras are three extra versions of the original implementation.
 
 I mostly used the [Wikipedia page for Base64](https://en.wikipedia.org/wiki/Base64) to learn the Base64 design and process.
 
-The .out files in /executables are Linux executables (ELF 64-bit LSB pie executable for x86-64 processor architecture)
+The .out files in /executables are Linux executables (ELF, LSB, PIE executable for x86-64 processor architecture).
